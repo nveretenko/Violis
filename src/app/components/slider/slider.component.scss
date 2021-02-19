@@ -1,0 +1,26 @@
+.bg-slider {
+  background: url("../../../assets/images/bg-slider.jpg") 0 no-repeat;
+  background-size: cover;
+  margin-top: 60px;
+  padding: 0;
+
+  .carousel-fade {
+    .carousel-item {
+      padding-bottom: 60%;
+
+      .absolute {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

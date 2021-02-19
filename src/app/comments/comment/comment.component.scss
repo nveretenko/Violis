@@ -1,0 +1,85 @@
+@import "../../../custom/variables";
+@import "../../../custom/helpers/captions";
+@import "../../../custom/helpers/input";
+
+.comments {
+  font: 1.4rem/1.6rem "Fira Sans", Arial, Helvetica, sans-serif;
+  background: url("../../../assets/images/See2.jpg");
+  background-size: cover;
+  min-height: 1500px;
+  margin-top: 50px;
+  margin-bottom: -60px;
+  &-content {
+    background: rgba(255, 255, 255, 0.75);
+    &__item {
+      margin-bottom: 40px;
+      text-align: left !important;
+
+      .comment-content {
+        margin-top: 20px;
+        word-break: break-all;
+      }
+    }
+  }
+}
+
+.comment-author {
+  margin-right: 40px;
+  padding: 5px 15px;
+  background-color: $color-danger;
+  color: $color-main--light;
+  border-radius: 20px;
+}
+
+.header {
+  .header__link.active {
+    position: relative;
+    color: $gray;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: $font-size-largest;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+
+    &:hover {
+      color: $color-danger;
+      cursor: default;
+    }
+  }
+}
+
+h2 {
+  @extend %h2;
+  margin-top: 50px;
+  color: $color-danger;
+  font-weight: 600;
+}
+
+textarea {
+  margin-top: 10px;
+  width: 100%;
+}
+
+h4 {
+  color: darken($color-main--blue, 10%);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  font-size: $font-size-large;
+}
+
+input {
+  @extend %input;
+  margin-top: 10px;
+}
+
+button {
+  @extend %button-submit;
+  margin-top: 10px;
+  margin-left: calc(100% - 115px);
+}
+
+@media screen and (min-width: 1400px) {
+  .comments {
+    margin-top: 90px;
+  }
+}

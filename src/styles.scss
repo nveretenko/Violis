@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,400;1,700&family=Roboto:wght@400;700&display=swap");
+@import "vendor/reset.css";
+@import "custom/variables";
+@import "custom/helpers/link";
+
+:root {
+  --blue-top: #0000ff;
+  --blue-dark: #0762ca;
+  --red-torch: #ff1b1b;
+  --white-titan: #f0f0ff;
+  --gray-silver: #c1c1c1;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  font: $font-size-base "Roboto", sans-serif;
+  font-weight: normal;
+  color: var(--gray-dark);
+  overflow-x: hidden;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #fff;
+}
+
+.margin-top-rooms {
+  margin-top: 110px;
+
+  .show-rooms {
+    @extend %red-link;
+  }
+
+  .price {
+    color: var(--red-torch);
+    margin-bottom: 0;
+
+    & + p {
+      margin-top: 0;
+    }
+  }
+
+  .price-items {
+    span {
+      color: inherit;
+
+      &:last-child {
+        color: var(--red-torch);
+      }
+
+      &.days {
+        margin-right: 20px;
+        color: initial;
+      }
+    }
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+      padding: 5px 0;
+
+      &:nth-child(odd) {
+        background-color: var(--light);
+      }
+    }
+  }
+
+  .photo-collection {
+    margin: 40px 0;
+  }
+
+  h3 {
+    font-family: "fira_sansbold_italic", sans-serif;
+    color: var(--red-torch);
+    font-size: $font-size-biggest;
+  }
+
+  h4 {
+    margin-bottom: 15px;
+    color: var(--blue);
+    font-family: "fira_sansbold_italic", sans-serif;
+    font-size: $font-size-large;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font: 1.4rem/1.6rem "fira_sansitalic", Arial, Helvetica, sans-serif;
+
+    .standard__item {
+      color: var(--red-torch);
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  .position-relative {
+    position: relative;
+    padding-bottom: 70%;
+  }
+
+  .position-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+    }
+  }
+}
+
+.room-description {
+  li {
+    display: flex;
+    align-items: baseline;
+    font: 1.4rem/1.6rem "fira_sansitalic", Arial, Helvetica, sans-serif;
+
+    p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      color: var(--red-torch);
+    }
+  }
+}
+
+.transform {
+  cursor: pointer;
+  &:hover + .search {
+    opacity: 1;
+  }
+}
+
+.search {
+  opacity: 0;
+  color: var(--white);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  transition: 400ms;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.price,
+.note {
+  span {
+    vertical-align: super;
+    width: 12px;
+    height: 12px;
+    color: var(--red-torch);
+  }
+}
+
+.note {
+  padding: 0;
+  border-left-color: #8f8f8f;
+  p {
+    padding: 10px;
+    background-color: var(--white);
+  }
+}
+
+input {
+  &.ng-invalid.ng-touched {
+    border: 2px solid var(--red-torch);
+  }
+
+  &.ng-valid.ng-touched {
+    border: 2px solid var(--green);
+  }
+}
+
+.validation {
+  font: 1.4rem/1.6rem "Fira Sans", Arial, Helvetica, sans-serif;
+  color: var(--red-torch);
+}
+
+/* ******************mdb-carousel( redefinition styles )************************************************************* */
+.carousel {
+  &-control-next-icon,
+  &-control-prev-icon {
+    height: 10rem !important;
+    width: 10rem !important;
+  }
+  .carousel-indicators {
+    margin: 0;
+    bottom: -35px;
+    li {
+      height: 0.625rem !important;
+      width: 0.625rem !important;
+      background-color: var(--blue);
+      opacity: 0.15;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .carousel {
+    .carousel-indicators {
+      li {
+        width: 1.25rem !important;
+        height: 1.25rem !important;
+      }
+    }
+  }
+}
+/* *********************************************************************************************************************** */
+
+/* ********************modal bootstrap( redefinition styles )******************************************** */
+
+.modal-body {
+  padding: 1.6rem;
+}
+
+.modal-open .modal {
+  z-index: 1200;
+  top: 50%;
+}
+
+.modal-header .close {
+  padding: 1.6rem;
+  margin: -1.6rem -1.6rem -1.6rem auto;
+  font-size: 2.4rem;
+}
+
+.modal-title {
+  font-size: 2.4rem;
+}
+
+.search {
+  display: none;
+}
+
+.gm-style-pbc + div img {
+  pointer-events: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .search {
+    display: block;
+  }
+}

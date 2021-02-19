@@ -1,0 +1,114 @@
+@import "../../custom/variables";
+@import "../../custom/helpers/captions";
+
+.scheme {
+  margin-top: 50px;
+}
+
+.header {
+  .header__link.active {
+    position: relative;
+    color: #7d7d7d;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: $font-size-largest;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+
+    &:hover {
+      color: $color-danger;
+      cursor: default;
+    }
+  }
+}
+
+.intro {
+  position: relative;
+  overflow: hidden;
+
+  .content {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.video {
+  display: none;
+  position: relative;
+  padding-bottom: 56.25%;
+
+  &__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+h2 {
+  @extend %h2;
+  margin-top: 50px;
+  color: $color-danger;
+  font-weight: 600;
+  &:before {
+    top: 50%;
+  }
+  &::after {
+    top: 100%;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  h2 {
+    &::before {
+      top: 3rem;
+    }
+    &::after {
+      top: 4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    margin-bottom: -37px;
+    z-index: -1;
+
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .video {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .intro {
+    margin-bottom: -65px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .scheme {
+    margin-top: 90px;
+
+    .intro {
+      margin-bottom: -75px;
+    }
+  }
+}

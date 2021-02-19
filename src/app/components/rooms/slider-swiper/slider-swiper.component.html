@@ -1,0 +1,10 @@
+<div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
+  <swiper *ngIf="type == 'component' && show" class="swiper-container" fxFlex="auto" [config]="config"
+    [disabled]="disabled">
+    <div *ngFor="let slide of slides" class="swiper-slide">
+      <div class="slide-img-wrap" fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+        <img class="slide-img" src="{{slide}}" alt="">
+      </div>
+    </div>
+  </swiper>
+</div>

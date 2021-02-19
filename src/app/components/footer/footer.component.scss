@@ -1,0 +1,139 @@
+@import "../../../custom/variables";
+
+.footer {
+  background: url("../../../assets/images/footer-bg.png") repeat-x;
+  padding: 20px 0;
+  margin: 20px 0;
+  color: $color-main--light;
+}
+
+.phone-link {
+  display: block;
+  color: inherit;
+}
+
+.social-link {
+  display: inline-block;
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+  color: inherit;
+
+  &:hover {
+    color: $color-danger;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.reservation-link {
+  position: fixed;
+  top: 160px;
+  right: 15px;
+  z-index: 100;
+}
+
+.btn-link {
+  position: relative;
+  left: 15px;
+  margin: 0 auto;
+  padding: 16px 40px;
+  background: transparent;
+  outline: none;
+  text-decoration: none;
+  font-size: 16px;
+  font: $font-size-base "Fira Sans", Arial, sans-serif;
+  color: #111111;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
+}
+
+.btn-link::after,
+.btn-link::before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 10%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
+  border-radius: 50%;
+}
+
+.btn-link::before {
+  background-color: #0762ca;
+  top: -10px;
+  left: 15px;
+  animation: top 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite
+    alternate;
+}
+
+.btn-link::after {
+  background-color: #048dec;
+  top: 40px;
+  left: 185px;
+  animation: bottom 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite
+    alternate;
+}
+
+.btn-link:hover {
+  color: white;
+}
+
+.btn-link:hover::before,
+.btn-link:hover::after {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  animation: none;
+}
+
+.btn-link:hover::after {
+  left: 0;
+}
+
+.btn-link:hover::before {
+  top: 8px;
+  left: 5.6px;
+}
+
+.btn-link span {
+  padding: 8px 25px;
+  background: #048dec;
+  border-radius: 20px;
+}
+
+@keyframes top {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 50px);
+  }
+}
+
+@keyframes bottom {
+  from {
+    transform: translate(-155px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 60px 0;
+    margin: 40px 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .reservation-link {
+    display: none;
+  }
+}

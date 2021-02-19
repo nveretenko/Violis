@@ -1,0 +1,73 @@
+<section class="container contacts" id="contacts">
+  <div class="row">
+    <div class="col-12">
+      <h2>Контакты отеля</h2>
+    </div>
+    <div class="col-md-6 contacts__block">
+      <p>71100, УКРАИНА, Бердянск, ул. Пушкарева, 5, дальняя коса.</p>
+      <p>тел. +38 (097) 4129005</p>
+      <p>тел. +38 (095) 6209990</p>
+      <p>тел. +38 (06153) 92171</p>
+      <p>e-mail: violis@violis.com.ua</p>
+      <p>Уважаемые гости</p>
+      <p>
+        Бронирование номера осуществляется путем направления заявки в отдел
+        бронирования отеля посредством электронной почты
+        <a href="mailto:violis@violis.com.ua">violis@violis.com.ua</a>
+        или
+        <a class="header__item swing" [routerLink]="['/reservation']">on-line бронирования</a>,
+        с последующим подтверждением посредством телефонной связи
+      </p>
+    </div>
+    <div class="col-md-6">
+      <h3>Ваш вопрос:</h3>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <label>
+          <input class="contacts__input" type="text" name="name" placeholder="Имя" formControlName="name">
+        </label>
+        <div class="validation" *ngIf="form.get('name').invalid && form.get('name').touched">
+          <small *ngIf="form.get('name').errors.required">Ваше имя, пожалуйста</small>
+        </div>
+        <label>
+          <input class="contacts__input" type="email" name="email" placeholder="Ваш email..." formControlName="email">
+        </label>
+        <div class="validation" *ngIf="form.get('email').invalid && form.get('email').touched">
+          <small *ngIf="form.get('email').errors.required">Введите Ваш email</small>
+          <small *ngIf="form.get('email').errors.email">Введите корректный email</small>
+        </div>
+        <label>
+          <input class="contacts__input" type="tel" formControlName="phone" prefix="+" [showMaskTyped]="true"
+            [mask]="mask" />
+        </label>
+        <div class="validation" *ngIf="form.get('phone').invalid && form.get('phone').touched">
+          <small>Введите Ваш телефон</small>
+        </div>
+        <div>
+          <label>
+            <textarea name="text" rows="5" wrap="soft" placeholder="Сообщение" formControlName="message"></textarea>
+          </label>
+        </div>
+        <div class="validation" *ngIf="form.get('message').invalid && form.get('message').touched">
+          <small *ngIf="form.get('message').invalid">Введите Ваше сообщение</small>
+        </div>
+        <button class="button" type="submit" [disabled]="form.invalid">отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <ng-template #modal>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Спасибо</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Ваше сообщение успешно отправлено! Если оно требует ответа, мы свяжемся с Вами!
+    </div>
+  </ng-template>
+
+  <div *ngIf="isLoading | async" class="loader">
+    <img src="assets/images/loading.gif" alt="">
+  </div>
+</section>

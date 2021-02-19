@@ -1,0 +1,67 @@
+@import "../../../custom/variables";
+@import "../../../custom/helpers/captions";
+@import "../../../custom/helpers/input";
+@import "../../../custom/helpers/loader";
+
+.contacts {
+  textarea {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  h2 {
+    @extend %h2;
+    color: $color-danger;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: $font-size-large;
+  }
+
+  &__input {
+    @extend %input;
+    margin-top: 10px;
+  }
+
+  &__block {
+    p:first-child,
+    p:nth-child(4),
+    p:nth-child(5),
+    p:nth-child(6) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 100;
+}
+
+.button {
+  @extend %button-submit;
+  margin-top: 10px;
+  margin-left: calc(100% - 115px);
+
+  &[disabled] {
+    background-color: $input-disabled-bg;
+  }
+}
+
+.validation {
+  font: 1.4rem/1.6rem "Fira Sans", Arial, Helvetica, sans-serif;
+  color: $color-danger;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    padding-top: 60px;
+  }
+}

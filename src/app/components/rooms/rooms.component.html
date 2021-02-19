@@ -1,0 +1,38 @@
+<section class="container rooms" id="rooms">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>Наши номера</h2>
+      <div class="note">
+        <p>
+          Современные коттеджи на территории отеля "Виолис" располагают комфортабельными номерами класса
+          "Стандарт", "Стандарт+", "Люкс", что дает возможность выбрать жилье на любой вкус со всеми
+          удобствами, горячим и холодным водоснабжением, холодильником, спутниковым ТВ, кондиционером
+          и различными ценовыми категориями.
+        </p>
+        <p class="note-danger">
+          Проживание в отеле с животными по согласованию с администрацией. Услуга платная.
+          За несанкционированный провоз животных штраф — 200 грн/сутки.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div *ngFor="let room of rooms" class="col-md-6 col-lg-4 text-center">
+      <div class="rooms__item">
+        <div class="position-relative">
+          <a routerLink="/{{room.link}}">
+            <div class="position-absolute">
+              <img class="transform" src="assets/images/{{room.src}}" alt="" title="{{room.title}}">
+              <span class="search">
+                <svg>
+                  <use xlink:href="assets/symbol-defs.svg#icon-eye-plus"></use>
+                </svg>
+              </span>
+              <h3>Номера класса {{room.title}}</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

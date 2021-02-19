@@ -1,0 +1,24 @@
+<section class="container-fluid map">
+  <div class="col text-center">
+    <h3>Мы на карте</h3>
+    <agm-map
+      [latitude]="lat"
+      [longitude]="lng"
+      [zoom]="zoom"
+      [disableDefaultUI]="false"
+      [zoomControl]="false"
+    >
+      <agm-marker [latitude]="lat" [longitude]="lng" [label]="label">
+      </agm-marker>
+      <agm-circle
+        [latitude]="lat + 0.3"
+        [longitude]="lng"
+        [radius]="5000"
+        [fillColor]="'red'"
+        [circleDraggable]="true"
+        [editable]="true"
+      >
+      </agm-circle>
+    </agm-map>
+  </div>
+</section>

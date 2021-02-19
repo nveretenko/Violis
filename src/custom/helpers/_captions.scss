@@ -1,0 +1,35 @@
+@import "../variables";
+
+%h2 {
+  position: relative;
+  display: inline-block;
+  font-family: "robotobold", sans-serif;
+  color: $color-danger;
+  text-transform: uppercase;
+  margin: 3rem 0;
+  font-size: $font-size-largest;
+  font-weight: 600;
+  line-height: normal;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 3rem;
+    transform: translate(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: $color-danger;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 4rem;
+    transform: translate(-50%);
+    width: 15%;
+    height: 2px;
+    background-color: $color-danger;
+  }
+}

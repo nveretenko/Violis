@@ -1,0 +1,25 @@
+@import "../custom/variables";
+
+.active {
+  color: $color-danger !important;
+}
+
+.go-top {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  opacity: 0;
+  transform: translateX(-9999px);
+  width: 4rem;
+  height: 4rem;
+  background-color: #c1bfbf;
+  z-index: 2000;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.to-show {
+  opacity: 1;
+  transform: none;
+  transition: opacity 1s;
+}

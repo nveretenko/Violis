@@ -1,0 +1,90 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <header class="header">
+        <div class="header__nav">
+          <div class="logo">
+            <a
+              [routerLink]="['/']"
+              [class.header__link_home]="homeLink"
+            >
+              <img src="assets/images/Logo.gif" alt="">
+            </a>
+          </div>
+          <div class="nav-icon" (click)="toggle()" [ngClass]="{open: visibility}">
+            <span class="nav-icon__item"></span>
+            <span class="nav-icon__item"></span>
+            <span class="nav-icon__item"></span>
+            <span class="nav-icon__item"></span>
+            <span class="nav-icon__item"></span>
+            <span class="nav-icon__item"></span>
+          </div>
+        </div>
+        <ul class="header__item" [ngClass]="{open: visibility}">
+          <li>
+            <span class="anchor" routerLinkActive="active">
+              <svg>
+                <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+              </svg>
+            </span>
+            <a
+              class="header__link"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact:true}"
+              [routerLink]="['/']"
+              [class.header__link_home]="homeLink"
+            >Главная</a>
+          </li>
+          <li>
+            <span routerLinkActive="active">
+              <svg>
+                <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+              </svg>
+            </span>
+            <a class="header__link" (click)="setDocTitleService.setDocTitle('Виолис/номера')" [routerLink]="['/']"
+               fragment="rooms">Наши номера</a>
+          </li>
+          <li>
+            <span>
+              <svg>
+                <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+              </svg>
+            </span>
+            <a class="header__link" (click)="setDocTitleService.setDocTitle('Виолис/о нас')" [routerLink]="['/']"
+               fragment="about">О нас</a>
+          </li>
+          <li>
+            <span>
+              <svg>
+                <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+              </svg>
+            </span>
+            <a class="header__link" (click)="setDocTitleService.setDocTitle('Виолис/контакты')" [routerLink]="['/']"
+               fragment="contacts">Контакты</a>
+          </li>
+          <li>
+            <span>
+              <svg>
+                <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+              </svg>
+            </span>
+            <a class="header__link" routerLinkActive="active" [routerLink]="['/scheme']">Схема</a>
+          </li>
+          <li>
+            <span>
+              <svg>
+                <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+              </svg>
+            </span>
+            <a class="header__link" routerLinkActive="active" [routerLink]="['/comments']">Отзывы</a>
+          </li>
+        </ul>
+        <a class="header__item header__item_feature"
+           [routerLink]="['/reservation']"
+           routerLinkActive="visible">
+          Забронировать
+        </a>
+      </header>
+    </div>
+  </div>
+</div>

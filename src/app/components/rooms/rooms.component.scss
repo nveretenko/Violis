@@ -1,0 +1,75 @@
+@import "../../../custom/helpers/captions";
+@import "../../../custom/variables";
+
+.rooms {
+  .note {
+    margin-bottom: 20px;
+
+    p {
+      font: 1.4rem/1.6rem 'Fira Sans', Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  }
+
+  .note-danger {
+    color: var(--red-torch);
+  }
+
+  &__item {
+    overflow: hidden;
+
+    .position-relative {
+      position: relative;
+      padding-bottom: 70%;
+    }
+
+    .position-absolute {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 30%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 400ms;
+        pointer-events: none;
+      }
+
+      &:hover:before {
+        content: '';
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: background-color 400ms;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+    }
+  }
+
+  h2 {
+    @extend %h2;
+  }
+
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: $font-size-large;
+    text-transform: uppercase;
+    color: var(--gray-dark);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rooms {
+    padding-top: 60px;
+  }
+}

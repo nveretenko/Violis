@@ -1,0 +1,160 @@
+<div class="container margin-top-rooms">
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Номер «Стандарт» — Бердянск, отель Виолис</h3>
+      <p>
+        Таким номером мог бы гордиться любой отель, ведь этот настоящий Стандарт,
+        размещенный в прекрасном коттедже, имеет нестандартно полное наполнение!
+        В отеле <span class="standard__item">12</span> таких отдельных номеров на двоих и, несмотря на скромную
+        категорию,
+        они позволяют насладиться индивидуальной террасой и незаметным почти никому входом.
+      </p>
+      <h4>Что необычного в Вашем номере Стандарт?</h4>
+      <p>
+        Такой, казалось, скромный номер может похвастаться наличием большой двуспальной
+        кровати, а также отдельным спальным местом в виде раскладной софы. Именно поэтому
+        в настоящем Стандарте с легкостью поместятся трое наших гостей.
+      </p>
+      <p>
+        Площадь номера — <span class="standard__item">25</span> квадратных метров. А это значит, что здесь будет много
+        места
+        для передвижения и жители не будут мешать друг другу.
+      </p>
+      <p>
+        Комфортабельность гарантирована, поскольку <span class="standard__item">наполнение</span> номера включает в себя
+        все
+        необходимое:
+      </p>
+      <ul class="room-description">
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>большой шкаф в прихожей для вещей гостей;</p>
+        </li>
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>маленький журнальный столик и дополнительные стулья;</p>
+        </li>
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>спальная кровать на двоих и отдельная раскладная софа,
+            в расчете на ночевку еще одного человека;</p>
+        </li>
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>только современная и очень удобная мебель;</p>
+        </li>
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>ультрасовременный кондиционер;</p>
+        </li>
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>спутниковое телевидение для всех, кто не желает расставаться с телевизором
+            даже на отдыхе;</p>
+        </li>
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>вместительный холодильник;</p>
+        </li>
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>комфортабельная душевая кабинка с горячей водой, которую подают круглосуточно;</p>
+        </li>
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>специальная сушилка для одежды и белья;</p>
+        </li>
+        <li>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+                        </svg>
+                    </span>
+          <p>все необходимые туалетные принадлежности.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h4 class="price">
+        Цена номера в {{getDate() | date:'yyyy'}} г.
+        <span>
+                    <svg>
+                        <use xlink:href="assets/symbol-defs.svg#icon-star-full"></use>
+                    </svg>
+                </span>
+      </h4>
+      <p>
+        В сутки за 2-х взрослых и детей о 5-ти лет, в грн.
+      </p>
+      <div class="price-items">
+        <p><span>01.05 — 01.06</span><span>1400</span></p>
+        <p><span>01.06 — 15.06</span><span>1900</span></p>
+        <p><span>15.06 — 24.08</span><span>2500</span></p>
+        <p><span>01.06 — 15.06</span><span><span class="days">ПТ-ВС, Праздн.</span>	2000</span></p>
+        <p><span>15.06 — 24.08</span><span><span class="days">ПТ-ВС, Праздн.</span>	2600</span></p>
+        <p><span>24.08 — 30.09</span><span>1900</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h4 class="photo-collection">Фото номера</h4>
+    </div>
+    <div class="col-12">
+      <app-slider-swiper [slides]="slides"></app-slider-swiper>
+    </div>
+    <div class="col-12 text-center mt-3">
+      <a class="show-rooms" (click)="getDocTitle()" [routerLink]="['/']" fragment="rooms">Посмотреть другие номера</a>
+    </div>
+    <div class="col-md-8">
+      <div class="note">
+        <p>
+                    <span>
+                        <svg>
+                            <use xlink:href="assets/symbol-defs.svg#icon-star-full"></use>
+                        </svg>
+                    </span>
+          Администрация отеля оставляет за собой право на изменение цен. Цены на
+          забронированные и оплаченные номера не изменяются.
+        </p>
+      </div>
+    </div>
+  </div>
+  <app-tariffs></app-tariffs>
+</div>

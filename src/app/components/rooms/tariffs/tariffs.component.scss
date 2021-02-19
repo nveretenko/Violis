@@ -1,0 +1,43 @@
+@import "../../../../custom/variables";
+
+.tariffs {
+  padding-top: 30px;
+  border-top: 1px dashed;
+
+  h3 {
+    font-size: $font-size-large;
+  }
+
+  h4 {
+    font-size: $font-size-small;
+  }
+
+  .star-color {
+    color: $color-main--blue;
+  }
+
+  span {
+    vertical-align: super;
+    width: 12px;
+    height: 12px;
+    color: $color-danger;
+  }
+
+  li {
+    display: flex;
+    align-items: baseline;
+    font: 1.4rem/1.6rem "Fira Sans", Arial, Helvetica, sans-serif;
+
+    p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      color: $color-danger;
+    }
+  }
+}

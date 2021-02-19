@@ -1,0 +1,120 @@
+@import "../../custom/variables";
+@import "../../custom/helpers/input";
+@import "../../custom/helpers/captions";
+@import "../../custom/helpers/loader";
+
+.reservation {
+  padding-top: 70px;
+  margin-bottom: -60px;
+
+  &.container-fluid {
+    background: url("../../assets/images/bg-reservation.jpg") no-repeat;
+    background-size: cover;
+
+    .form {
+      margin: 70px 0;
+      background-color: $color-main--light;
+      padding: 10px;
+      border: 5px solid $color-danger;
+      border-radius: 20px;
+
+      .form__caption {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+          display: none;
+          @extend %h2;
+          font-weight: 600;
+        }
+      }
+
+      .form__wrapper {
+        margin-bottom: 10px;
+        .form__input {
+          position: relative;
+          display: flex;
+          .icon-calendar {
+            position: absolute;
+            display: flex;
+            pointer-events: none;
+            right: 30px;
+            width: 38px;
+            height: 38px;
+            color: #989898;
+            svg {
+              margin: auto;
+              width: 22px;
+              height: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    .form__group {
+      margin-bottom: 10px;
+
+      .input {
+        @extend %input;
+      }
+
+      &.rooms {
+        display: flex;
+        justify-content: space-around;
+
+        label,
+        input {
+          cursor: pointer;
+        }
+      }
+
+      &.additional-information {
+        textarea {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  @extend %button-submit;
+  margin-left: calc(100% - 115px);
+
+  &[disabled] {
+    background-color: $input-disabled-bg;
+  }
+}
+
+.date_departure.ng-touched,
+.date_departure.ng-valid,
+.arrival_date.ng-touched,
+.arrival_date.ng-valid {
+  border: none !important;
+}
+
+@media screen and (min-width: 991px) {
+  .reservation {
+    &.container-fluid {
+      .form {
+        .form__caption {
+          h2 {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .reservation {
+    & + .container-fluid {
+      .form {
+        margin: 120px 0;
+        padding: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../custom/variables";
+
+.container-fluid.map {
+  padding: 0;
+
+  .col {
+    padding: 0;
+  }
+
+  h3 {
+    margin: 60px 0 25px;
+    font-weight: 600;
+    font-size: $font-size-largest;
+    color: $gray;
+  }
+}
+
+agm-map {
+  height: 500px;
+}

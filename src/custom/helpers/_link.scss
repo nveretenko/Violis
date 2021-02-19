@@ -1,0 +1,19 @@
+@import "../variables";
+
+%primary-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 20px;
+  background-color: $color-main--blue;
+  color: $color-main--light;
+}
+
+%red-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: $color-danger;
+  color: $color-main--light;
+  border-radius: 18px;
+  font: 1.4rem/1.6rem fira_sansitalic, Arial, Helvetica, sans-serif;
+}

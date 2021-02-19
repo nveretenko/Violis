@@ -1,0 +1,149 @@
+<div class="container margin-top-rooms">
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Номер Люкс — Бердянск, отель Виолис</h3>
+      <p>
+        Люкс ищут те, кто привык к комфорту высочайшего уровня и ищет его во всём. Те, кто
+        желает подчеркнуть свою индивидуальность и не жалеет на это средств, достойны лучших
+        номеров категории Люкс, которых в отеле «Виолис» только 3. Каждый из них — совершенный.
+        Каждый — идеальный в своей простоте и продуманности каждого квадратного метра.
+      </p>
+      <p>
+        Все номера Люкс расположены на втором этаже административного корпуса и могут похвастаться
+        отдельными входами в апартаменты. Здесь Вы увидите не только шикарный интерьер в светлых
+        тонах, где каждая деталь создана со вкусом, но и идеальное сочетание мебели с декоративными
+        элементами. Все вокруг будет идеальным — от ковра на полу до маленького декоративного
+        украшения на журнальном столике. Такую роскошь создавали для гурманов истинного релакса
+        и отдыха.
+      </p>
+      <p>
+        Просторные номера имеют площадь <span class="standard__item">32 квадратных метра,</span> на которых размещено
+        все необходимое
+        для создания райских условий проживания.
+      </p>
+      <p>
+        Все номера имеют двухспальную кровать, раскладную софу и кресло-кровать для ребенка.
+      </p>
+      <h4>Комфортабельность гарантируют:</h4>
+      <ul class="room-description">
+        <li>
+          <span>
+            <svg>
+              <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+            </svg>
+          </span>
+          <p>просторный шкаф для одежды и вещей;</p>
+        </li>
+        <li>
+          <span>
+            <svg>
+              <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+            </svg>
+          </span>
+          <p>удобная новейшая мебель;</p>
+        </li>
+        <li>
+          <span>
+            <svg>
+              <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+            </svg>
+          </span>
+          <p>
+            кондиционер, который не подведет в жаркое время и подарит ценный глоток свежего
+            воздуха;
+          </p>
+        </li>
+        <li>
+          <span>
+            <svg>
+              <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+            </svg>
+          </span>
+          <p>спутниковое телевидение для любителей ТВ;</p>
+        </li>
+        <li>
+          <span>
+            <svg>
+              <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+            </svg>
+          </span>
+          <p>практичный холодильник;</p>
+        </li>
+        <li>
+          <span>
+            <svg>
+              <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+            </svg>
+          </span>
+          <p>
+            журнальный столик с 2 кожаными креслами для чаепития или милой вечерней
+            беседы перед любовными утехами;
+          </p>
+        </li>
+        <li>
+          <span>
+            <svg>
+              <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+            </svg>
+          </span>
+          <p>большая душевая с горячей водой, которую подают на радость гостей 24 часа в сутки;</p>
+        </li>
+        <li>
+          <span>
+            <svg>
+              <use xlink:href="assets/symbol-defs.svg#icon-anchor"></use>
+            </svg>
+          </span>
+          <p>
+            санузел, умывальник, сушилка для полотенец и белья, полный перечень
+            туалетных принадлежностей.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h4 class="price">
+        Цена номера в {{getDate() | date:'yyyy'}} г.
+        <span>
+          <svg>
+            <use xlink:href="assets/symbol-defs.svg#icon-star-full"></use>
+          </svg>
+        </span>
+      </h4>
+      <p>В сутки за 2-х взрослых и детей о 5-ти лет, в грн.</p>
+      <div class="price-items">
+        <p><span>01.05 — 01.06</span><span>1500</span></p>
+        <p><span>01.06 — 15.06</span><span>2000</span></p>
+        <p><span>15.06 — 24.08</span><span>2800</span></p>
+        <p><span>01.06 — 15.06</span><span><span class="days">ПТ-ВС, Праздн.</span> 2100</span></p>
+        <p><span>15.06 — 24.08</span><span><span class="days">ПТ-ВС, Праздн.</span> 2900</span></p>
+        <p><span>24.08 — 30.09</span><span>2000</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h4 class="photo-collection">Фото номера</h4>
+    </div>
+    <div class="col-12">
+      <app-slider-swiper [slides]="slides"></app-slider-swiper>
+    </div>
+    <div class="col-12 text-center mt-3">
+      <a class="show-rooms" (click)="getDocTitle()" [routerLink]="['/']" fragment="rooms">Посмотреть другие номера</a>
+    </div>
+    <div class="col-md-8">
+      <div class="note">
+        <p>
+          <span>
+            <svg>
+              <use xlink:href="assets/symbol-defs.svg#icon-star-full"></use>
+            </svg>
+          </span>
+          Администрация отеля оставляет за собой право на изменение цен. Цены на
+          забронированные и оплаченные номера не изменяются.
+        </p>
+      </div>
+    </div>
+  </div>
+  <app-tariffs></app-tariffs>
+</div>

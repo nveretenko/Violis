@@ -1,0 +1,21 @@
+<div class="container-fluid comments">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center comments-content">
+        <h2>Отзывы — отель Виолис в Бердянске</h2>
+        <app-comment
+          *ngFor="let review of reviews | slice:0:5" class="comments-content__item"
+          [review]="review"
+        >
+        </app-comment>
+      </div>
+    </div>
+    <app-comment-form
+      (onAdd)="updateComments($event)"
+    ></app-comment-form>
+  </div>
+</div>
+
+
+
+

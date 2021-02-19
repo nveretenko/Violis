@@ -1,0 +1,33 @@
+@import "../../../custom/helpers/captions";
+@import "../../../custom/helpers/input";
+@import "../../../custom/variables";
+
+h2 {
+  @extend %h2;
+  margin-top: 50px;
+  color: $color-danger;
+  font-weight: 600;
+}
+
+h4 {
+  color: darken($color-main--blue, 10%);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  font-size: $font-size-large;
+}
+
+textarea {
+  margin-top: 10px;
+  width: 100%;
+}
+
+input {
+  @extend %input;
+  margin-top: 10px;
+}
+
+button {
+  @extend %button-submit;
+  margin-top: 10px;
+  margin-left: calc(100% - 115px);
+}

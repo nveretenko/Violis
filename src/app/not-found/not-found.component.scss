@@ -1,0 +1,61 @@
+@import "../../custom/helpers/link";
+
+.container-fluid.not-found {
+  padding: 0;
+}
+
+.not-found {
+  header {
+    display: flex;
+    background: radial-gradient(circle at center 140px, #50b5ec, #048dec);
+    height: 60px;
+
+    h1 {
+      display: flex;
+      margin: auto;
+      font-size: $font-size-gigantic;
+      color: $color-main--light;
+      letter-spacing: 3px;
+      font-weight: 600;
+    }
+  }
+
+  h2 {
+    font-size: 5rem;
+    color: $color-main--dark;
+    font-weight: 600;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    line-height: 1;
+    padding: 0 15px;
+  }
+
+  &__content {
+    font-size: $font-size-large;
+    color: $color-main--dark;
+    padding: 0 15px;
+  }
+
+  .not-found-link {
+    @extend %primary-link;
+    display: block;
+    margin: 0 15px;
+    font-size: $font-size-biggest;
+    border-radius: 27px;
+    background-color: #048bec;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .not-found {
+    h2 {
+      font-size: 6rem;
+      margin-top: 10%;
+    }
+
+    &-link {
+      display: inline-block !important;
+      padding: 10px 50px !important;
+    }
+  }
+}
