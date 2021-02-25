@@ -9,6 +9,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   sendmail(data: any): Observable<any> {
-    return this.http.post(`https://formspree.io/f/xjvpawkp`, data);
+    //return this.http.post(`https://formspree.io/f/xjvpawkp`, data);
+    return  this.http.post(`https://formspree.io/f/xwkwdkaj`, data)
   }
 }
