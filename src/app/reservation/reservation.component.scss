@@ -80,7 +80,6 @@
 
 .button {
   @extend %button-submit;
-  margin-left: calc(100% - 115px);
 
   &[disabled] {
     background-color: $input-disabled-bg;
