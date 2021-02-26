@@ -12,7 +12,7 @@ var ApiService = /** @class */ (function () {
         this.http = http;
     }
     ApiService.prototype.sendmail = function (data) {
-        return this.http.post("https://formspree.io/f/xjvpawkp", data);
+        return this.http.post("https://formspree.io/f/xwkwdkaj", data);
     };
     ApiService = __decorate([
         core_1.Injectable({
