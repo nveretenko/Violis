@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1614332590489,
+  "timestamp": 1614333467809,
   "index": "https://nveretenko.github.io/Violis/index.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "https://nveretenko.github.io/Violis/4.c0cb14778bbb338ff2c0.js",
         "https://nveretenko.github.io/Violis/5.b2b766c6e196e5e9d45a.js",
         "https://nveretenko.github.io/Violis/index.html",
-        "https://nveretenko.github.io/Violis/main.0e0072d167357f3eeeab.js",
+        "https://nveretenko.github.io/Violis/main.c0ccfda00fd1a4ca60b6.js",
         "https://nveretenko.github.io/Violis/manifest.webmanifest",
         "https://nveretenko.github.io/Violis/polyfills.ff48e0ea8ec1a7f6f207.js",
         "https://nveretenko.github.io/Violis/runtime.8279aacae295a3601c73.js",
@@ -262,8 +262,8 @@
     "https://nveretenko.github.io/Violis/fa-solid-900.3ceb50e7bcafb577367c.woff2": "9b592048b9062b00f0b2dd782d70a95b7dc69b83",
     "https://nveretenko.github.io/Violis/fa-solid-900.46fdbd2d897f8824e63c.woff": "3b86a0ce15d8d534b65e98560e321a933d310688",
     "https://nveretenko.github.io/Violis/footer-bg.dd54f9a5004f7806fb25.png": "d41174d695c4cde07485f972e523fd07c9b544c8",
-    "https://nveretenko.github.io/Violis/index.html": "b969aae5d7485621904309e71405f4a2e3b51896",
-    "https://nveretenko.github.io/Violis/main.0e0072d167357f3eeeab.js": "526c2f8ef66a60ed88b2b1ab169166af96cf54e4",
+    "https://nveretenko.github.io/Violis/index.html": "0a399b4fb9b11869a218215a0b983ba221583227",
+    "https://nveretenko.github.io/Violis/main.c0ccfda00fd1a4ca60b6.js": "ed12b4d5d7581c1adcb7508b34cc93b042d8a2f1",
     "https://nveretenko.github.io/Violis/manifest.webmanifest": "1ce71e156a9e7ab6a3864b5e538e9cc4a33cabdd",
     "https://nveretenko.github.io/Violis/polyfills.ff48e0ea8ec1a7f6f207.js": "5aba8109b8678a5ea7e473f69f6483af9328feaf",
     "https://nveretenko.github.io/Violis/runtime.8279aacae295a3601c73.js": "368891c85ebe26e9932193beaf51d51fe43db4dc",
