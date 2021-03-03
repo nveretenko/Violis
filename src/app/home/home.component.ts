@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   private fragment: string;
-
+ 
   constructor(private route: ActivatedRoute) {}
 
   // tslint:disable-next-line:typedef

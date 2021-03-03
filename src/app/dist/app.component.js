@@ -23,6 +23,9 @@ var AppComponent = /** @class */ (function () {
         else {
             this.delta = false;
         }
+        console.log(window.pageYOffset);
+        console.log(this.coords);
+        console.log(this.delta);
     };
     AppComponent.prototype.smoothScrollTop = function () {
         window.scrollTo({

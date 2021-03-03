@@ -29,6 +29,9 @@ export class AppComponent implements OnInit {
     } else {
       this.delta = false;
     }
+    console.log(window.pageYOffset)
+    console.log(this.coords);
+    console.log(this.delta);
   }
 
   smoothScrollTop(): void {
