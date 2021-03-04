@@ -34,6 +34,9 @@ var modal_1 = require("ngx-bootstrap/modal");
 var datepicker_1 = require("ngx-bootstrap/datepicker");
 var chronos_1 = require("ngx-bootstrap/chronos");
 var ngx_swiper_wrapper_1 = require("ngx-swiper-wrapper");
+var service_worker_1 = require("@angular/service-worker");
+var environment_1 = require("../environments/environment");
+var window_service_1 = require("./services/window.service");
 chronos_1.defineLocale('ru', chronos_1.ruLocale);
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -70,9 +73,11 @@ var AppModule = /** @class */ (function () {
                     apiKey: 'AIzaSyA82eV9FRb8HcXA2skYyp-p98SoXoGqTfw'
                 }),
                 ngx_swiper_wrapper_1.SwiperModule,
+                service_worker_1.ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment_1.environment.production }),
             ],
             exports: [router_1.RouterModule],
             providers: [
+                window_service_1.WINDOW_PROVIDERS,
                 {
                     provide: http_1.HTTP_INTERCEPTORS,
                     useClass: loading_interceptor_1.LoadingInterceptor,

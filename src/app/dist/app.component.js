@@ -5,30 +5,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 exports.__esModule = true;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var common_1 = require("@angular/common");
+var window_service_1 = require("./services/window.service");
 var AppComponent = /** @class */ (function () {
     // tslint:disable-next-line:variable-name
-    function AppComponent(router, _meta, _title) {
+    function AppComponent(router, _meta, _title, document, window) {
         this.router = router;
         this._meta = _meta;
         this._title = _title;
-        this.coords = document.documentElement.clientHeight;
+        this.document = document;
+        this.window = window;
     }
     AppComponent.prototype.onWindowScroll = function () {
-        if (window.pageYOffset > this.coords) {
+        var offset = this.window.pageYOffset ||
+            this.document.documentElement.scrollTop ||
+            this.document.body.scrollTop ||
+            0;
+        var clientHeight = this.document.documentElement.clientHeight;
+        if (offset > clientHeight) {
             this.delta = true;
         }
         else {
             this.delta = false;
         }
-        console.log(window.pageYOffset);
-        console.log(this.coords);
-        console.log(this.delta);
     };
     AppComponent.prototype.smoothScrollTop = function () {
-        window.scrollTo({
+        this.window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
@@ -38,7 +46,7 @@ var AppComponent = /** @class */ (function () {
         var _this = this;
         this.router.events.subscribe(function (event) {
             if (event instanceof router_1.NavigationEnd) {
-                _this.invisibleHeaderFooter = (event.urlAfterRedirects !== '/404');
+                _this.invisibleHeaderFooter = event.urlAfterRedirects !== '/404';
                 switch (event.urlAfterRedirects) {
                     case '/':
                         _this._title.setTitle('Отель Виолис');
@@ -56,11 +64,17 @@ var AppComponent = /** @class */ (function () {
                         break;
                     case '/comments':
                         _this._title.setTitle('Виолис/отзывы');
-                        _this._meta.updateTag({ name: 'description', content: 'Отзывы, отели Бердянска - Виолис' });
+                        _this._meta.updateTag({
+                            name: 'description',
+                            content: 'Отзывы, отели Бердянска - Виолис'
+                        });
                         break;
                     case '/reservation':
                         _this._title.setTitle('Виолис/бронирование');
-                        _this._meta.updateTag({ name: 'description', content: 'Бронирование номера в отеле Виолис Бердянск' });
+                        _this._meta.updateTag({
+                            name: 'description',
+                            content: 'Бронирование номера в отеле Виолис Бердянск'
+                        });
                         break;
                     case '/standard':
                         _this._title.setTitle('Виолис/номер Стандарт');
@@ -102,7 +116,7 @@ var AppComponent = /** @class */ (function () {
         });
     };
     __decorate([
-        core_1.HostListener('window:scroll')
+        core_1.HostListener('window:scroll', [])
     ], AppComponent.prototype, "onWindowScroll");
     AppComponent = __decorate([
         core_1.Component({
@@ -110,7 +124,9 @@ var AppComponent = /** @class */ (function () {
             templateUrl: './app.component.html',
             styleUrls: ['./app.component.scss'],
             encapsulation: core_1.ViewEncapsulation.None
-        })
+        }),
+        __param(3, core_1.Inject(common_1.DOCUMENT)),
+        __param(4, core_1.Inject(window_service_1.WINDOW))
     ], AppComponent);
     return AppComponent;
 }());

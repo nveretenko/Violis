@@ -29,6 +29,7 @@ import { defineLocale, ruLocale } from 'ngx-bootstrap/chronos';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { WINDOW_PROVIDERS } from './services/window.service';
 defineLocale('ru', ruLocale);
 
 @NgModule({
@@ -66,6 +67,7 @@ defineLocale('ru', ruLocale);
   ],
   exports: [RouterModule],
   providers: [
+    WINDOW_PROVIDERS,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoadingInterceptor,
