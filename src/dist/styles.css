@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,400;1,700&family=Roboto:wght@400;700&display=swap");
-@import url(vendor/reset.css);
+@import url(assets/vendor/reset.css);
 .margin-top-rooms .show-rooms {
   display: inline-block;
   padding: 10px 15px;
