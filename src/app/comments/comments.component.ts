@@ -47,7 +47,6 @@ export class CommentsComponent {
   ];
 
   constructor(private route: ActivatedRoute) {
-    console.log(this.route);
   }
 
   updateComments(review: Review) {

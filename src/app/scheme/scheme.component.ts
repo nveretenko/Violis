@@ -9,6 +9,5 @@ import {ActivatedRoute} from '@angular/router';
 export class SchemeComponent {
 
   constructor(private route: ActivatedRoute) {
-    console.log(this.route);
   }
 }
